@@ -12,7 +12,7 @@ if len(sys.argv) == 3 and sys.argv[1] in sensor_args:
 else:
     sys.exit(1)
 
-dhtDevice = sensor(getattr(board, pin))
+dhtDevice = sensor(getattr(board, "D" + str(pin)))
 
 temperature = dhtDevice.temperature
 humidity = dhtDevice.humidity
